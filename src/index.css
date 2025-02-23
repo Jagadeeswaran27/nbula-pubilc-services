@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  @apply relative text-white font-medium hover:text-green-400 transition-colors duration-300;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-[-4px] w-0 h-0.5 bg-green-400 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.glass-nav {
+  @apply bg-black bg-opacity-10 backdrop-blur-md border-b border-white/10;
+}
