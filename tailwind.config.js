@@ -1,0 +1,117 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f7ff',
+          100: '#e0eefe',
+          200: '#bbd7fe',
+          300: '#8ab6fd',
+          400: '#5289f9',
+          500: '#2f63f5',
+          600: '#1e48e8',
+          700: '#1a39d6',
+          800: '#1c31ae',
+          900: '#1d2f8a',
+          950: '#172154',
+        },
+        secondary: {
+          50: '#f5f8ff',
+          100: '#edf1ff',
+          200: '#dbe3ff',
+          300: '#bfcbff',
+          400: '#9ba8ff',
+          500: '#7a83ff',
+          600: '#6460f7',
+          700: '#544ae6',
+          800: '#453db8',
+          900: '#3a3893',
+          950: '#232152',
+        },
+        accent: {
+          50: '#fff8eb',
+          100: '#ffecc6',
+          200: '#ffd988',
+          300: '#ffc14a',
+          400: '#ffa71d',
+          500: '#ff8800',
+          600: '#e26200',
+          700: '#bc4500',
+          800: '#983600',
+          900: '#7c2e00',
+          950: '#431400',
+        },
+        dark: {
+          50: '#f6f7f9',
+          100: '#eceef2',
+          200: '#d4d9e3',
+          300: '#afb9ca',
+          400: '#8594ac',
+          500: '#667792',
+          600: '#516079',
+          700: '#434f64',
+          800: '#394354',
+          900: '#333b49',
+          950: '#21252f',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'system-ui', 'sans-serif'],
+      },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+        blob: 'blob 7s infinite',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'slide-up': 'slide-up 0.5s ease-out',
+        'slide-down': 'slide-down 0.5s ease-out',
+        'slide-left': 'slide-left 0.5s ease-out',
+        'slide-right': 'slide-right 0.5s ease-out',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        blob: {
+          '0%': { transform: 'scale(1)' },
+          '33%': { transform: 'scale(1.1)' },
+          '66%': { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'slide-down': {
+          '0%': { transform: 'translateY(-20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'slide-left': {
+          '0%': { transform: 'translateX(20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        'slide-right': {
+          '0%': { transform: 'translateX(-20px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+      },
+      boxShadow: {
+        'inner-lg': 'inset 0 2px 15px 0 rgba(0, 0, 0, 0.1)',
+        highlight: '0 0 0 2px rgba(47, 99, 245, 0.2)',
+        'highlight-accent': '0 0 0 2px rgba(255, 136, 0, 0.2)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'texture-pattern': "url('https://www.transparenttextures.com/patterns/brushed-alum.png')",
+      },
+    },
+  },
+  plugins: [],
+};
